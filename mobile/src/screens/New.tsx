@@ -9,7 +9,7 @@ import { api } from "../lib/axios";
 const availableWeekDays = ['Domingo','Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado'];
 
 export function New(){
-  const [ tittle, setTitle ] = useState('');
+  const [ title, setTitle ] = useState('');
   const [ weekDays, setWeekDays ] = useState<number[]>([]);
 
   function handleToggleWeekDay( weekDayIndex: number ){
@@ -22,10 +22,10 @@ export function New(){
 
   async function handleCreateNewHabit() {
     try {
-      if(!tittle.trim() || weekDays.length === 0){
+      if(!title.trim() || weekDays.length === 0){
         Alert.alert('Novo Hábito','Informe o nome do hábito e a recorrência.');
       } else {
-      await api.post('/habits', {tittle, weekDays});
+      await api.post('/habits', {title, weekDays});
       setTitle('');
       setWeekDays([]);
       Alert.alert('Novo Hábito','Hábito criado com sucesso!');
@@ -54,7 +54,7 @@ export function New(){
           placeholder="Exemplo: Praticar exercícios, comer bem, etc."
           placeholderTextColor={colors.zinc[400]}
           onChangeText={setTitle}
-          value={tittle}
+          value={title}
         />
         <Text className="mt-4 mb-3 text-white font-semibold text-base">
           Qual a recorrência?

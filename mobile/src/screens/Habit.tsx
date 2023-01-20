@@ -1,9 +1,9 @@
 import { ScrollView, View, Text } from "react-native";
 import { useRoute } from "@react-navigation/native";
 import { BackButton } from "../components/BackButton";
-import dayjs from "dayjs";
 import { ProgressBar } from "../components/ProgressBar";
 import { Checkbox } from "../components/Checkbox";
+import dayjs from "dayjs";
 
 interface Params {
   date: string;

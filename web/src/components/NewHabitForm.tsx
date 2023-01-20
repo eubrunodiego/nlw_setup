@@ -7,18 +7,18 @@ const availableWeekDays = ['Domingo','Segunda-feira','Terça-feira','Quarta-feir
 
 export function NewHabitForm(){
 
-  const [ tittle, setTitle ] = useState('')
+  const [ title, setTitle ] = useState('')
   const [ weekDays, setWeekDays ] = useState<number[]>([])
 
   async function createNewHabit(event: FormEvent) {
     event.preventDefault()
 
-    if(!tittle || weekDays.length === 0) {
+    if(!title || weekDays.length === 0) {
       return
     }
 
     await api.post('habits', {
-      tittle,
+      title,
       weekDays,
     })
 
@@ -40,17 +40,17 @@ export function NewHabitForm(){
 
   return (
     <form onSubmit={createNewHabit} className="w-full flex flex-col mt-6">
-      <label htmlFor="tittle" className="font-semibold leading-tight">
+      <label htmlFor="title" className="font-semibold leading-tight">
         Qual seu comprometimento?
       </label>
 
       <input
-        id="tittle"
+        id="title"
         type="text"
         placeholder="Ex. Praticar exercícios, comer bem, etc."
         className="p-4 rounded-lg mt-3 bg-zinc-800 text-white placeholder:text-zinc-400"
         autoFocus
-        value={tittle}
+        value={title}
         onChange={event => setTitle(event.target.value)}
       />
 

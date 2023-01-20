@@ -2,14 +2,14 @@ import { PrismaClient } from '@prisma/client'
 
 const prisma = new PrismaClient()
 
-const firstHabitId = '0730ffac-d039-4194-9571-01aa2aa0efbd'
-const firstHabitCreationDate = new Date('2022-12-31T03:00:00.000')
+const firstHabitId = 'ccc51beb-a021-4cc6-893b-c94e51cf3e1d'
+const firstHabitCreationDate = new Date('2023-01-05T00:00:00.000Z')
 
-const secondHabitId = '00880d75-a933-4fef-94ab-e05744435297'
-const secondHabitCreationDate = new Date('2023-01-03T03:00:00.000')
+const secondHabitId = 'cc6b69df-0abd-4889-bae4-9f090f0cd70c'
+const secondHabitCreationDate = new Date('2023-01-07T00:00:00.000Z')
 
-const thirdHabitId = 'fa1a1bcf-3d87-4626-8c0d-d7fd1255ac00'
-const thirdHabitCreationDate = new Date('2023-01-08T03:00:00.000')
+const thirdHabitId = '5013f136-22a9-4ccf-9301-4ee6728b5f57'
+const thirdHabitCreationDate = new Date('2023-01-09T00:00:00.000Z')
 
 async function run() {
   await prisma.habit.deleteMany()
@@ -22,7 +22,7 @@ async function run() {
     prisma.habit.create({
       data: {
         id: firstHabitId,
-        tittle: 'Beber 2L de água',
+        title: 'Beber 2l de água',
         created_at: firstHabitCreationDate,
         weekDays: {
           create: [
@@ -37,7 +37,7 @@ async function run() {
     prisma.habit.create({
       data: {
         id: secondHabitId,
-        tittle: 'Praticar exercícios',
+        title: 'Comer vegetais',
         created_at: secondHabitCreationDate,
         weekDays: {
           create: [
@@ -52,7 +52,7 @@ async function run() {
     prisma.habit.create({
       data: {
         id: thirdHabitId,
-        tittle: 'Dormir no mínimo 8h',
+        title: 'Praticar exercícios',
         created_at: thirdHabitCreationDate,
         weekDays: {
           create: [

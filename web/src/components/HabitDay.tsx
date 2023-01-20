@@ -1,10 +1,9 @@
 import * as Popover from '@radix-ui/react-popover';
 import * as Checkbox from '@radix-ui/react-checkbox';
-
-import { ProgressBar } from './ProgressBar';
-import clsx from 'clsx';
 import { Check } from 'phosphor-react';
+import { ProgressBar } from './ProgressBar';
 import dayjs from 'dayjs';
+import clsx from 'clsx';
 
 interface HabitDayProps {
   date: Date

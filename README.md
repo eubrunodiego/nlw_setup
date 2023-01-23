@@ -458,8 +458,4 @@ Instalando o Stack navigator
 
 ```bash
 npm install @react-navigation/native-stack
-<<<<<<< HEAD
-```
-=======
-```
->>>>>>> 3f1177edfeba7e1a91e7f8056ded7c26475683b1
+

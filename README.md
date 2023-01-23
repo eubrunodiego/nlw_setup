@@ -16,7 +16,11 @@ Este projeto foi desenvolvido durante a Next Level Week (NLW) Setup, evento de p
 
 ## Habit
 
+<<<<<<< HEAD
 Trata-se de uma aplicação (web e mobile) para monitoramento de hábitos diários como: praticar exercícios, comer de forma saudável, beber 2 litros água, etc.
+=======
+Trata-se de uma aplicação (web e mobile) para…
+>>>>>>> 3f1177edfeba7e1a91e7f8056ded7c26475683b1
 
 Veja o protótipo no Figma:
 
@@ -149,6 +153,7 @@ Veja o protótipo no Figma:
 
 ## Aula 5 - O próximo nível
 
+<<<<<<< HEAD
 - [x]  Front-end
     - [x]  Listando hábitos possíveis do dia
     - [x]  Desabilitando em datas passadas
@@ -173,6 +178,9 @@ Veja o protótipo no Figma:
         - [x]  Animar a `ProgressBar`
         - [x]  Animar a `CheckBok`
     - [x]  Testar tudo
+=======
+- [x]  ???
+>>>>>>> 3f1177edfeba7e1a91e7f8056ded7c26475683b1
 
 # Tecnologias utilizadas no desenvolvimento
 
@@ -458,4 +466,8 @@ Instalando o Stack navigator
 
 ```bash
 npm install @react-navigation/native-stack
+<<<<<<< HEAD
 ```
+=======
+```
+>>>>>>> 3f1177edfeba7e1a91e7f8056ded7c26475683b1

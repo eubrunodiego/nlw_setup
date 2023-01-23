@@ -48,7 +48,7 @@ export function NewHabitForm(){
         id="title"
         type="text"
         placeholder="Ex. Praticar exercícios, comer bem, etc."
-        className="p-4 rounded-lg mt-3 bg-zinc-800 text-white placeholder:text-zinc-400"
+        className="p-4 rounded-lg mt-3 bg-zinc-800 text-white placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-violet-800 focus:ring-offset-zinc-900 "
         autoFocus
         value={title}
         onChange={event => setTitle(event.target.value)}
@@ -63,13 +63,13 @@ export function NewHabitForm(){
           return (
             <Checkbox.Root
               key={weekDay}
-              className="flex items-center gap-3 group"
+              className="flex items-center gap-3 group focus:outline-none"
               checked={weekDays.includes(index)}
               onCheckedChange={() => {
                 handleToggleWeekDay(index)
               }}
             >
-              <div className="h-8 w-8 rounded-lg flex items-center justify-center bg-zinc-900 border-2 border-zinc-800 group-data-[state=checked]:bg-green-500 group-data-[state=checked]:border-green-5 00">
+              <div className="h-8 w-8 rounded-lg flex items-center justify-center transition-colors duration-150 bg-zinc-900 border-2 border-zinc-800 group-data-[state=checked]:bg-green-500 group-data-[state=checked]:border-green-500 group-focus:ring-2 group-focus:ring-offset-2 group-focus:ring-violet-800 group-focus:ring-offset-background">
                 <Checkbox.Indicator>
                   <Check size={20} className="text-white" />
                 </Checkbox.Indicator>
@@ -84,7 +84,7 @@ export function NewHabitForm(){
 
       <button
       type="submit"
-      className="p-4 rounded-lg mt-6 flex items-center justify-center gap-3 transition transform ease-in-out duration-500 font-semibold bg-green-600 hover:bg-green-500"
+      className="p-4 rounded-lg mt-6 flex items-center justify-center gap-3 transition-colors duration-500 font-semibold bg-green-600 hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-700 focus:ring-offset-zinc-900"
       >
         <Check size={20} weight="bold" />
         Confirmar
